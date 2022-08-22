@@ -1,0 +1,25 @@
+.containor{
+    display: flex;
+    flex-direction: row;
+}
+.child{
+    width: 100px;
+    height: 200px;
+    background-color: aqua;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+button{
+    border-radius: 5px;
+}
+#clock{
+    background-color: aqua;
+    width: 180px;
+    padding: 20px;
+    font-size: 40px;
+}
+.size{
+    font-size: 40px;
+    background-color:bisque;
+}

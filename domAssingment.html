@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="domAssingment.css">
+</head>
+<body>
+    <div id="text1">
+        Write the code to access element which is having id as "text"
+    </div>
+
+
+    <h1>Write the code to access element which is having tag as "h1"</h1>
+
+
+    <div class="box">Write the code to access element which is having class as "box"</div>
+
+     
+    <!-- Change the heading from ""Hello"" to ""Hello World"" using DOM functions" -->
+    <h1 id="helloWorld">Hello
+    </h1>
+
+    
+    <!-- Create three cards on HTML page and arrange them using flex property in row or horizontal direction 
+    and also create button at the bottom named "Change Flex direction". When user clicks on this button, 
+    the cards arrangement should be changed to vertical direction. -->
+    <div class="containor">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+    </div><br>
+    <button onclick="changeDirection()">Change Flex Direction</button><br><br><br>
+
+
+    <!-- What’s the difference between window vs document? -->
+    <table border="1">
+        <tr>
+            <th>s.no</th>
+            <th>window</th>
+            <th>document</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>It represents a browser window or frame that displays the contents of the webpage. </td>
+            <td>It represents any HTML document or web page that is loaded in the browser.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>It is the very first object that is loaded in the browser.</td>
+            <td>It is loaded inside the window.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>It is the object of the browser.</td>
+            <td>It is the object of window property.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Global objects, functions, and variables of JavaScript are members of the window object.</td>
+            <td>All the tags, elements with attributes in HTML are part of the document.</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>We can access the window from the window only. i.e. window.window</td>
+            <td>We can access the document from a window using the window. document</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>The window is part of BOM, not DOM.</td>
+            <td>The document is part of BOM (browser object model) and dom (Document object model)</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Properties of the window object cannot be accessed by the document object.</td>
+            <td>Properties of document objects such as title, body, cookies, etc can also be accessed by a window like this window. document.title</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>syntax:  window.propertyname;</td>
+            <td>syntax:  document.propertyname;</td>
+        </tr>
+        <var><tr>
+            <td>9</td>
+            <td>example: window.innerHeight : will return the height of the content area of the browser</td>
+            <td>example: document.title :  will return the title of the document</td>
+        </tr>
+    </table><br><br>
+
+
+    <h1>Hello 
+        <!-- Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions" -->
+    </h1><br><br>
+
+
+    <!-- Create an HTML page having content as Hello world and a button named Replace Text. 
+    When user will click on this button page content should be changed to "Welcome to Elevation academy" -->
+    <div id="replace">
+        Hello World !!! <br>
+        <button onclick="replaceTexts()">Replace Text</button>
+    </div><br><br>
+
+
+    <!-- Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second -->
+    <div id="clock">
+        <span class="size" id="hour">00</span>:
+        <span class="size" id="minut">00</span>:
+        <span class="size" id="second">00</span>
+    </div><br><br>
+
+
+    <!-- Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected -->
+    <form action="">
+        <label for="year"> select year</label>
+        <select name="year" id="year">
+            <option value="19-20">19-20</option>
+            <option value="20-21">20-21</option>
+            <option value="21-22">21-22</option>
+            <option value="22-23">22-23</option>
+            <option value="23-24">23-24</option>
+            <option value="24-25">24-25</option>
+            <option value="25-26">25-26</option>
+            <option value="26-27">26-27</option>
+            <option value="27-28">27-28</option>
+        </select>
+        <button type="submit"  onclick="yearSelected(event)">click</button>
+    </form><br><br>
+
+
+    <!-- "Create a form having name ,email, phone no. , birth year 
+    Add validations - phone no. should start with 91 , it should be 10 digits
+    email should be domain prepbytes.com
+    birth year should be > 95" -->
+    <form  onsubmit="bioData(event)">
+        <label for="Name">Enter Name:</label>
+        <input type="text"><br>
+        <label for="email">Enter Email:</label>
+        <input type="email"><br>
+        <label for="phone-no">Phone Num:</label>
+        <input type="number"><br> <div id="error" style="display: none;"></div>
+        <input type="submit" value="submit">
+    </form>
+    <textarea style="display: none;" id="dataShow"></textarea>
+    <script src="domAssingment.js"></script>
+</body>
+</html>
